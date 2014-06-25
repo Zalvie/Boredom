@@ -7,7 +7,7 @@ j = request.jar()
 
 request = request.defaults({jar: j})
 
-host = url.parse "http://vpsfrom.us"
+host = url.parse 'http://leak.sx'
 
 console.log '    [URL]', host.href
 
@@ -17,11 +17,11 @@ request.get host.resolve('/'), (error, response, body) ->
 
   document = jsdom.jsdom(body).parentWindow.window.document
   
-  token = document.getElementsByName("jschl_vc")[0].value
+  token = document.getElementsByName('jschl_vc')[0].value
 
-  script = document.getElementsByTagName("script")[0].innerHTML
-  script = (/setTimeout\(function\(\)\{([^]*?)f\.submit\(\)\;/m.exec(script)[1]).replace(/(^\s+[fat].*?$)/gm, '').replace(/[\n|\r|\s]/g, "").replace(/var([\w]+,)+/, "t=\"" + host.host + "\";").replace(/a\.value/, "answer")
-  eval script # Totally "safe" yo
+  script = document.getElementsByTagName('script')[0].innerHTML
+  script = (/setTimeout\(function\(\)\{([^]*?)f\.submit\(\)\;/m.exec(script)[1]).replace(/(^\s+[fat].*?$)/gm, '').replace(/[\n|\r|\s]/g, '').replace(/var([\w]+,)+/, 't=\'' + host.host + '\';').replace(/a\.value/, 'answer')
+  eval script # Totally 'safe' yo
 
   console.log ' [ANSWER]', answer
   console.log '  [TOKEN]', token

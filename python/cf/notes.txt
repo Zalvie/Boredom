@@ -1,10 +1,11 @@
 CF's way:
-          Attempt to force cf-content to display to fix the form "bug" on Gecko/FireFox
+          Attempt to force cf-content to display to fix the form "bug" on Gecko/FireFox.
           Wait 5850 seconds, lying about "wait up to 5 seconds" when it's "close" to 6 seconds.
-          Make a temp 'div' and 'a' tag to get the domain for later, don't know what happened to document.domain but lets not use it.
+          Make a temp 'div' and 'a' tag to get the domain for later, 
+               don't know what happened to not using document.domain but hey their choice.
           Do calculations and add the length of the domain name to the answer and submit the form.
-          And clearly doesn't check if it even has gone one second since the user requested the token...
-
+          And clearly doesn't check if it even has gone one second since the user requested the token.
+          
 
 Useful links:
         http://pyparsing.wikispaces.com/

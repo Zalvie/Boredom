@@ -1,6 +1,5 @@
 
 cat = ['+[]', '+!![]'] + [''.join(['!+[]'] + ['+!![]' for _ in (range(1, i))]) for i in range(2, 10)]
-s = '!+[]+!![]'
 
 def calc(s):
   output = None
